@@ -8,3 +8,4 @@
 4. post_comment: id, post_id, profile_id, comment_text, created_datetime.
 5. friendship: profile_request, profile_accept.
 Нижче Ви можете побачити ER-діаграму, в якій подрібніше видно, над чим ми працюємо:
+![ER-Diagram](https://github.com/BHunterS/Social-website/assets/118931658/37af3ca0-5990-440a-b748-3e7f5ec5579c)
