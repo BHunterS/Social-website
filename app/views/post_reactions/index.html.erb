@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Post reactions</h1>
+
+<div id="post_reactions">
+  <% @post_reactions.each do |post_reaction| %>
+    <%= render post_reaction %>
+    <p>
+      <%= link_to "Show this post reaction", post_reaction %>
+    </p>
+  <% end %>
+</div>

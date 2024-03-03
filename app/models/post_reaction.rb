@@ -1,0 +1,2 @@
+class PostReaction < ApplicationRecord
+end

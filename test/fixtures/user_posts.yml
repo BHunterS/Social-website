@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  profile_id: 1
+  written_text: MyString
+  media_location: MyString
+
+two:
+  profile_id: 1
+  written_text: MyString
+  media_location: MyString

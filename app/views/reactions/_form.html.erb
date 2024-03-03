@@ -1,0 +1,24 @@
+<%= form_with(model: reaction) do |form| %>
+  <% if reaction.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(reaction.errors.count, "error") %> prohibited this reaction from being saved:</h2>
+
+      <ul>
+        <% reaction.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form">
+  <div class="form__content">
+    <%= form.label :name, style: "display: block", class: "form__label" %>
+    <%= form.text_field :content, class: "form__field" %>
+  </div>
+
+  <div>
+    <%= form.submit class: "form__button" %>
+  </div>
+</div>
+<% end %>
