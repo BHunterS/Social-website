@@ -13,15 +13,23 @@
 
   <body>
   <header class="nav-bar">
-    <ul class="nav-bar__wrapper">
-      <li class="nav-bar__item"><a href="#" class="nav-bar__link"><%= link_to "Home", home_path %></a></li>
-      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "New Post", new_user_post_path %>
-      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "New Friendship", new_friendship_path %>
-      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "New Reaction", new_reaction_path %>
-      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "New User", new_user_path %>
-      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "New  Post reaction", new_post_reaction_path %>
-      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "New  Comment", new_post_comment_path %>
+  <ul class="nav-bar__wrapper">
+    <% if user_signed_in? %>
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "Home", home_path, class:"nav-link" %></a></li>
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "New Post", new_user_post_path, class:"nav-link" %>
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "New Friendship", new_friendship_path, class:"nav-link" %>
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "New Reaction", new_reaction_path, class:"nav-link" %>
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "New User", new_user_path, class:"nav-link" %>
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "New  Post reaction", new_post_reaction_path, class:"nav-link" %>
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "New  Comment", new_post_comment_path, class:"nav-link" %>
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link" %>
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "Edit Profile", edit_user_registration_path, class:"nav-link" %>
       </a></li>
+      <% else %>
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "Sign Up", new_user_registration_path, class:"nav-link" %>
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link" aria-current="page"><%= link_to "Sign In", new_user_session_path, class:"nav-link" %>
+      </a></li>
+      <% end %>
     </ul>
   </header>
 
