@@ -1,26 +1,28 @@
-<h2>Log in</h2>
-
+<%= image_tag "bootstrap-logo.svg", width: "40", height: "32", class: "mb-4" %>
+<h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+<div class="form-signin w-100 m-auto">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="field form-floating">
+    <%= f.label :email, for: "floatingInput"%><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", type: "email", class: "form-control", id: "floatingInput", placeholder: "name@example.com" %>
   </div>
 
-  <div class="field">
+  <div class="field form-floating">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.password_field :password, autocomplete: "current-password", type: "password", class: "form-control", id: "floatingPassword", placeholder: "Password"  %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div class="field form-check text-start my-3">  
+      <%= f.check_box :remember_me, class: "form-check-input", id: "flexCheckDefault" %>
+      <%= f.label :remember_me, for: "flexCheckDefault" %>
     </div>
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in",  class:"btn btn-primary w-100 py-2" %>
   </div>
 <% end %>
+</div>
 
 <%= render "devise/shared/links" %>
