@@ -10,10 +10,10 @@
 5. post_comment: id, post_id, profile_id, comment_text, created_datetime.
 6. friendship: profile_request, profile_accept.
 
-Діаграми:
+# Діаграми:
 ![ER - diagram МПП](https://github.com/BHunterS/Social-website/assets/118931658/ef66d24f-c71b-464b-9879-74aaca5fe082)
 
-API документація (Роути):
+# API документація (Роути):
 | Маршрут	        | Метод |	Опис |
 |---------|-------------|-------------|
 | /post_comments	         | GET    |	Відображення списку коментарів до постів користувачів. |
@@ -60,7 +60,7 @@ API документація (Роути):
 | /friendships/:id         |	DELETE	| Вилучення дружби. |
 | /up	                      | GET |	Повертає статус здоров'я програми. |
 
-Скріпти:
+# Скріпти:
 
-Інструкції щодо встановлення та запуску проекту:
+# Інструкції щодо встановлення та запуску проекту:
 
