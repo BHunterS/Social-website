@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_10_143256) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_17_092853) do
   create_table "friendships", force: :cascade do |t|
     t.integer "profile_request"
     t.integer "profile_accept"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "list_of_social_networking_services", force: :cascade do |t|
+    t.integer "list_id"
+    t.string "name"
+    t.string "social_network_type"
+    t.string "focus"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

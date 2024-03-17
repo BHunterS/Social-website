@@ -1,0 +1,2 @@
+class ListOfSocialNetworkingService < ApplicationRecord
+end
