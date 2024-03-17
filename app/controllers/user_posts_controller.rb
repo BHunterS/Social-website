@@ -4,6 +4,7 @@ class UserPostsController < ApplicationController
   # GET /user_posts or /user_posts.json
   def index
     @user_posts = UserPost.all
+    @social_networks = ListOfSocialNetworkingService.all
   end
 
   # GET /user_posts/1 or /user_posts/1.json
