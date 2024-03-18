@@ -1,8 +1,8 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  email: MyString
-  password: MyString
+  email: user1@example.com
+  encrypted_password: MyString
   country: MyString
   date_of_birth: MyString
   name: MyString
@@ -10,8 +10,8 @@ one:
   photo: MyString
 
 two:
-  email: MyString
-  password: MyString
+  email: user2@example.com
+  encrypted_password: MyString
   country: MyString
   date_of_birth: MyString
   name: MyString
