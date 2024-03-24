@@ -66,6 +66,6 @@ class UserPostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_post_params
-      params.require(:user_post).permit(:profile_id, :written_text, :media_location)
+      params.require(:user_post).permit(:profile_id, :written_text, :title)
     end
 end

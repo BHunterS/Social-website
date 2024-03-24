@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_17_092853) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_24_194720) do
   create_table "friendships", force: :cascade do |t|
     t.integer "profile_request"
     t.integer "profile_accept"
@@ -52,9 +52,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_17_092853) do
   create_table "user_posts", force: :cascade do |t|
     t.integer "profile_id"
     t.string "written_text"
-    t.string "media_location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
   end
 
   create_table "users", force: :cascade do |t|

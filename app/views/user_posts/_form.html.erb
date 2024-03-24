@@ -11,20 +11,20 @@
     </div>
   <% end %>
   <div class="form">
-  <div class="form__content">
-    <%= form.label :profile, style: "display: block", class: "form__label" %>
-    <%= form.text_field :content, class: "form__field" %>
+    <div class="field">
+      <%= form.label :profile %>
+      <%= form.text_field :profile_id, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= form.label :writtenText %>
+      <%= form.text_field :written_text, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
+    <div>
+      <%= form.submit class: "btn btn-primary w-100 py-2" %>
+    </div>
   </div>
-  <div class="form__content">
-    <%= form.label :writtenText, style: "display: block", class: "form__label" %>
-    <%= form.text_field :content, class: "form__field" %>
-  </div>
-  <div class="form__content">
-    <%= form.label :mediaLocation, style: "display: block", class: "form__label" %>
-    <%= form.text_field :content, class: "form__field" %>
-  </div>
-  <div>
-    <%= form.submit class: "form__button" %>
-  </div>
-</div>
 <% end %>

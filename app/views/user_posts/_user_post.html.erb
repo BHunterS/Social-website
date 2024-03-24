@@ -1,17 +1,7 @@
-<div id="<%= dom_id user_post %>">
-  <p>
-    <strong>Profile:</strong>
-    <%= user_post.profile_id %>
-  </p>
-
-  <p>
-    <strong>Written text:</strong>
-    <%= user_post.written_text %>
-  </p>
-
-  <p>
-    <strong>Media location:</strong>
-    <%= user_post.media_location %>
-  </p>
-
+<div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary w-100">
+  <div class="col-lg-6 px-0">
+    <strong class="d-inline-block mb-2 text-primary-emphasis"><%= user_post.profile_id %></strong>
+    <h1 class="display-4 fst-italic"><%= user_post.title %></h1>
+    <p class="lead my-3"><%= user_post.written_text %></p>
+  </div>
 </div>

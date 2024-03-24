@@ -2,9 +2,8 @@
 
 <%= render @user_post %>
 
-<div>
-  <%= link_to "Edit this user post", edit_user_post_path(@user_post) %> |
-  <%= link_to "Back to user posts", user_posts_path %>
-
-  <%= button_to "Destroy this user post", @user_post, method: :delete %>
+<div class="button-group">
+  <%= link_to "Edit this user post", edit_user_post_path(@user_post), class: "btn btn-primary w-100 py-2" %>
+  <%= link_to "Back to user posts", user_posts_path, class: "btn btn-primary w-100 py-2" %>
+  <%= button_to "Destroy this user post", @user_post, method: :delete, class: "btn btn-primary w-100 py-2" %>
 </div>

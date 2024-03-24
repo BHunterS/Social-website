@@ -57,10 +57,20 @@ class UsersController < ApplicationController
     end
   end
 
+  def is_admin?
+    valid_email_domain?(self.email)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
+    end
+
+    def valid_email_domain?(email)
+      valid_domains = ["karazin.ua"]
+      domain = email.split('@').last
+      valid_domains.include?(domain)
     end
 
     # Only allow a list of trusted parameters through.
