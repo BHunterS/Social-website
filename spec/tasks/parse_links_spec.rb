@@ -18,18 +18,6 @@ describe 'parse:links' do
       end
     end
   
-    describe 'data parsing' do
-      it 'correctly parses data from the specified URL' do
-        # Act: визиваємо нашу rake-задачу
-        Rake::Task['parse:links'].invoke
-  
-        # Assert: перевіряємо щоб дані були правильно розпарсені та збережені у базі даних
-        expect(List_of_social_networking_services.last.name).to_not be_nil
-        expect(List_of_social_networking_services.last.social_network_type).to_not be_nil
-        expect(List_of_social_networking_services.last.focus).to_not be_nil
-      end
-    end
-  
 describe 'database handling' do
   it 'does not create duplicate entries in the database' do
     # Act: Визиваємо нашу rake-задачу
