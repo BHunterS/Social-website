@@ -1,10 +1,41 @@
-<h1>Editing user</h1>
+<h1>Edit Your Profile</h1>
 
-<%= render "form", user: @user %>
+<div class="row">
+  <div class="col-md-6">
+    <%= form_for(@user, url: user_path(@user), method: :patch, html: { class: "form" }) do |f| %>
+    
+      <div class="mb-3">
+        <%= f.label :name, "Name" %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+    
+      <div class="mb-3">
+        <%= f.label :surname, "Surname" %>
+        <%= f.text_field :surname, class: "form-control" %>
+      </div>
 
-<br>
+      <div class="mb-3">
+        <%= f.label :country, "Country" %>
+        <%= f.text_field :country, class: "form-control" %>
+      </div>
+      
+      <div class="mb-3">
+        <%= f.label :date_of_birth, "Date of Birth" %>
+        <%= f.date_field :date_of_birth, class: "form-control" %>
+      </div>
 
-<div>
-  <%= link_to "Show this user", @user %> |
-  <%= link_to "Back to users", users_path %>
+      <div class="mb-3">
+        <%= f.label :email, "Email" %>
+        <%= f.email_field :email, class: "form-control", readonly: true %>
+      </div>
+
+      <div class="mb-3 d-flex justify-content-end">
+      <%= f.submit "Save Changes", class: "btn btn-primary w-100 py-2" %>
+      <%= link_to "Cancel", @user, class: "btn btn-secondary w-100 py-2" %>
+      </div>
+    
+    <% end %>
+  </div>
 </div>
+
+

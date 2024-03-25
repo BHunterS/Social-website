@@ -30,8 +30,9 @@
           <% end %>
           <li class="nav-item"><%= link_to "Add New Post", new_user_post_path, class: "nav-link link-body-emphasis px-2" %></li>
           <li class="nav-item"><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link link-body-emphasis px-2" %></li>
-          <li class="nav-item"><%= link_to "Edit Profile", edit_user_registration_path, class:"nav-link link-body-emphasis px-2" %></li>
-        <% else %>
+          <li class="nav-item"><%= link_to "Settings", edit_user_registration_path, class:"nav-link link-body-emphasis px-2" %></li>
+          <li class="nav-item"><%= link_to "My Profile", user_path(current_user), class:"nav-link link-body-emphasis px-2" %></li>
+          <% else %>
           <li class="nav-item"><%= link_to "Sign Up", new_user_registration_path, class:"nav-link link-body-emphasis px-2" %></li>
           <li class="nav-item"><%= link_to "Sign In", new_user_session_path, class:"nav-link link-body-emphasis px-2" %></li>
         <% end %>
